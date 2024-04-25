@@ -4894,9 +4894,7 @@ export async function collectData(awsConfig: AwsConfig[]): Promise<Object[]|null
                 logger.info("AWS - Config n°" + awsConfig.indexOf(oneConfig) + " correctly loaded user regions.");
             }
             if (response.Regions) {
-				
 				const collectedResults: any[] = [];
-
                 const promises = response.Regions.map(async(region) => {
                     try {
                         if (!gatherAll) {
